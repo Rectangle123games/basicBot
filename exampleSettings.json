@@ -4,11 +4,11 @@
     "etaRestriction": false,
     "welcome": true,
     "opLink": "www.op.com",
-    "rulesLink": "www.rules.com",
+    "rulesLink": "http://pastebin.com/aZHSKSVm",
     "themeLink": "www.theme.com",
-    "fbLink": "https://www.facebook.com/plugdj",
-    "youtubeLink": "www.youtube.com",
-    "website": "plug.dj/just-a-lazy-room",
+    "fbLink": "https://www.facebook.com/NikhilJangid007",
+    "youtubeLink": "www.youtube.com/UKFdubstep",
+    "website": null,
     "intervalMessages": ["Message 1", "Message 2"],
     "messageInterval": 4
 }
