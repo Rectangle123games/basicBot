@@ -83,11 +83,11 @@ var retrieveFromStorage = function(){
 var esBot = {
         version: "1.0.7",        
         status: false,
-        name: "basicBot",
-        creator: "EuclideanSpace",
+        name: "lazybot",
+        creator: "NikhilJangid",
         loggedInID: null,
-        scriptLink: "https://raw.githubusercontent.com/Yemasthui/basicBot/master/basicBot.js",
-        cmdLink: "http://git.io/245Ppg",
+        scriptLink: null,
+        cmdLink: "http://pastebin.com/PuKQhkdd",
         roomSettings: {
             maximumAfk: 120,
             afkRemoval: true,                
