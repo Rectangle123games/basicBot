@@ -61,7 +61,7 @@ var retrieveFromStorage = function(){
     var json_sett = null;
     var roominfo = document.getElementById("room-info");
     var info = roominfo.innerText;
-    var ref_bot = "@basicBot=";
+    var ref_bot = "@basicBot= http://dl.dropboxusercontent.com/s/4wdgx2qv2bg3z8a/standardSettings.json";
     var ind_ref = info.indexOf(ref_bot);
     if(ind_ref > 0){
         var link = info.substring(ind_ref + ref_bot.length, info.length);
@@ -85,7 +85,7 @@ var esBot = {
         status: false,
         name: "lazybot",
         creator: "NikhilJangid",
-        loggedInID: null,
+        loggedInID: "51cd0798877b9263732ba8a9",
         scriptLink: null,
         cmdLink: "http://pastebin.com/PuKQhkdd",
         roomSettings: {
@@ -120,10 +120,10 @@ var esBot = {
             filterChat: true,
             etaRestriction: false,
             welcome: true,
-            opLink: null,
-            rulesLink: null,
-            themeLink: null,
-            fbLink: null,
+            opLink: "http://pastebin.com/QHEDDuxN",
+            rulesLink: "http://pastebin.com/Htagx0Ji",
+            themeLink: "http://pastebin.com/S7sy02Vd",
+            fbLink: "www.facebook.com/NikhilJangid007",
             youtubeLink: null,
             website: null,
             intervalMessages: [],
@@ -541,7 +541,7 @@ var esBot = {
             }
             if(esBot.roomSettings.welcome){
                 setTimeout(function(){
-                    API.sendChat("/me " + welcome + "@" + user.username + ".");
+                    API.sendChat("/me " + welcome to lazyroom + "@" + user.username + ".");
                 }, 1*1000);
             }               
         },        
