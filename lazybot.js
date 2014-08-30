@@ -81,9 +81,9 @@ var retrieveFromStorage = function(){
 };
 
 var esBot = {
-        version: "1.0.7",        
+        version: "1.0.0",        
         status: false,
-        name: "lazybot",
+        name: "Bot",
         creator: "NikhilJangid",
         loggedInID: "51cd0798877b9263732ba8a9",
         scriptLink: null,
@@ -123,7 +123,7 @@ var esBot = {
             opLink: "http://pastebin.com/QHEDDuxN",
             rulesLink: "http://pastebin.com/Htagx0Ji",
             themeLink: "http://pastebin.com/S7sy02Vd",
-            fbLink: "www.facebook.com/NikhilJangid007",
+            fbLink: "",
             youtubeLink: null,
             website: null,
             intervalMessages: [],
@@ -531,7 +531,7 @@ var esBot = {
             }
             else{
                 esBot.room.users.push(new esBot.User(user.id, user.username));
-                var welcome = "Welcome ";
+                var welcome = "Welcome To Our room ";
             }    
             for(var j = 0; j < esBot.room.users.length;j++){
                 if(esBot.userUtilities.getUser(esBot.room.users[j]).id === user.id){
@@ -541,7 +541,7 @@ var esBot = {
             }
             if(esBot.roomSettings.welcome){
                 setTimeout(function(){
-                    API.sendChat("/me " + welcome to lazyroom + "@" + user.username + ".");
+                    API.sendChat("/me " + welcome + "@" + user.username + ".");
                 }, 1*1000);
             }               
         },        
@@ -993,7 +993,7 @@ var esBot = {
             esBot.room.autodisableInterval = setInterval(function(){esBot.room.autodisableFunc();}, 60 * 60 * 1000);
             esBot.loggedInID = API.getUser().id;            
             esBot.status = true;
-            API.sendChat('/cap 1');
+            API.sendChat('/cap 200');
             API.setVolume(0);
             API.sendChat('/me ' + esBot.name + ' v' + esBot.version + ' online!');
         },                        
@@ -1224,7 +1224,7 @@ var esBot = {
                                     var name = msg.substr(cmd.length + 2);
                                     var user = esBot.userUtilities.lookupUserName(name);
                                     if(typeof user === 'boolean') return API.sendChat('/me [@' + chat.from + '] Invalid user specified.');
-                                    //API.sendChat('/me [' + chat.from + ' whips out the banhammer :hammer:]');
+                                    else return API.sendChat('/me [' + chat.from + ' whips out the banhammer :hammer:]');
                                     API.moderateBanUser(user.id, 1, API.BAN.DAY);
                                 };                              
                         },
@@ -1502,7 +1502,7 @@ var esBot = {
                                 if( !esBot.commands.executable(this.rank, chat) ) return void (0);
                                 else{
                                     if(typeof esBot.roomSettings.fbLink === "string")
-                                        API.sendChat('/me [' + chat.from + '] Like us on facebook: ' + esBot.roomSettings.fbLink);
+                                        API.sendChat('/me [' + chat.from + '] follow our creator on facebook: ' + esBot.roomSettings.fbLink);
                                 };                              
                         },
                 },
